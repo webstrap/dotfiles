@@ -1,4 +1,116 @@
-syntax on
+set nocompatible               " be iMproved
+filetype off                   " required!
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+" required! 
+Plugin 'gmarik/Vundle.vim'
+
+" My Bundles here:
+"
+" original repos on github
+Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'ervandew/supertab'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+
+" Github repos of the user 'vim-scripts'
+" => can omit the username part
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+
+" non github repos
+Plugin 'git://git.wincent.com/command-t.git'
+" ...
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on     " required!
+
+syntax on
+let mapleader=","
+
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+set backspace=2 " make backspace work like most other apps
+
+set tabstop=4 shiftwidth=4 expandtab " convert tab to 4 spaces
+
+set number " show line numbers
+
+" Toggle Vexplore with Ctrl-E
+function! ToggleVExplorer()
+  if exists("t:expl_buf_num")
+      let expl_win_num = bufwinnr(t:expl_buf_num)
+      if expl_win_num != -1
+          let cur_win_nr = winnr()
+          exec expl_win_num . 'wincmd w'
+          close
+          exec cur_win_nr . 'wincmd w'
+          unlet t:expl_buf_num
+      else
+          unlet t:expl_buf_num
+      endif
+  else
+      exec '1wincmd w'
+      Vexplore
+      let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+map <silent> <C-E> :call ToggleVExplorer()<CR>
+
+" Hit enter in the file browser to open the selected
+" file with :vsplit to the right of the browser.
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+
+" Default to tree mode
+let g:netrw_liststyle=3
+
+" Change directory to the current buffer when opening files.
+"set autochdir
+
+" Configure jump to filename under cursor
+set suffixesadd+=.coffee,.tmpl
+set path+=/opt/amazineFrontend/scripts/app
+
+" activate mouse
+set mouse=a
+
+" disable line wrap
+set nowrap
+
+" execute syntastic on file open
+let g:syntastic_check_on_open = 1
+
+" highlight search results
+set hlsearch
+
+" shortcut save
+nnoremap <silent> <Leader>w :w<CR>
+
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'))
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>m :call RenameFile()<cr>
+

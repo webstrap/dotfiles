@@ -1,0 +1,89 @@
+.vim
+====
+
+
+### Setup
+
+
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
+
+Command-T
+
+    sudo apt-get install vim-nox;
+    sudo apt-get install ruby1.9.1-dev
+    sudo ruby ~/.vim/bundle/command-t/ruby/command-t/extconf.rb
+    sudo make -C ~/.vim/bundle/command-t/ruby/command-t
+
+Vim-fugitive
+
+    git config --global mergetool.fugitive.cmd 'vim -f -c "Gvdiff" "$MERGED"'
+    git config --global merge.tool fugitive
+    git config --global mergetool.prompt false
+
+### vim commands
+
+normal mode
+
+    ,t          open command-t
+                t   open selection as new tab
+                v   open selection as new vertical split buffer
+    <C-e>       toggle vim explorer
+                t   open selection as new tab
+                v   open selection as new vertical split buffer
+    :Error      trigger syntax check
+    ,{number}   switch to the tab with the given number e.g. ,2
+   
+    o        enter insert mode with new line below
+    O        enter insert mode with new line above
+    i        enter insert mode at the cursor position
+    a        enter insert mode after the cursor position
+    A        enter insert mode at the end of the line
+    cw       delete the current word and enter insert mode
+    dw       delete the current word
+    x        delete the current character
+    dd       delete a line
+    u        revert the last change
+    <C-r>    restore the last undo
+    p        paste the default register
+   
+    /{search}    search
+    ?{search}    search backwards
+    n            next result
+    N            previous result
+   
+    <C-w><right> switch to the right split buffer
+    <C-w><left>  switch to the left split buffer
+    :tabe    create a new tab
+   
+    v        enter visual mode
+    V        enter visual mode with line selection
+    <C-v>    enter visual mode with block selection (vertical selection)
+   
+    gf       go to file if the cursor is on a file path
+    <C-o>    go to the previous buffer (e.g. if used gf)
+    *        go to the next word where the cursor is at the moment
+    
+    {       move one block/function up
+    }       move one block/function down
+    <C-u>   move half page up
+    <C-d>   move half page down
+    
+   
+insert mode
+
+    <Tab>   start autocomplete if the cursor is at the end of a word
+    <ESC>   enter normal mode
+    
+visual mode
+
+    y   yank the current selection to the default register
+    yy  yank the current line
+    i[  select inside brackets (cursor has to be inside as well)
+    i]  select inside brackets (cursor has to be inside as well)
+    i{  select inside brackets (cursor has to be inside as well)
+    i'  select inside brackets (cursor has to be inside as well)
+    a[  select around (including)brackets (cursor has to be inside as well)
+    a]  select around (including) (cursor has to be inside as well)
+        
+    

@@ -102,6 +102,7 @@ set hlsearch
 
 " shortcut save
 nnoremap <silent> <Leader>w :w<CR>
+nnoremap <leader>q :q<cr>
 
 function! RenameFile()
     let old_name = expand('%')

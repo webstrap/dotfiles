@@ -1,6 +1,8 @@
 The MIT License
 
-Copyright (c) Zach Holman, http://zachholman.com
+Original work Copyright (c) Zach Holman, http://zachholman.com
+
+Modified work Copyright 2014 Alexander Kong  
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -12,8 +12,9 @@ Command-T
 
     sudo apt-get install vim-nox;
     sudo apt-get install ruby1.9.1-dev
-    sudo ruby ~/.vim/bundle/command-t/ruby/command-t/extconf.rb
-    sudo make -C ~/.vim/bundle/command-t/ruby/command-t
+    cd ~/.vim/bundle/command-t/ruby/command-t
+    sudo ruby ./extconf.rb
+    sudo make
 
 Vim-fugitive
 

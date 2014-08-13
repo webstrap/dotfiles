@@ -43,10 +43,11 @@ normal mode
     cw       delete the current word and enter insert mode
     dw       delete the current word
     x        delete the current character
-    dd       delete a line
+    dd       delete the current line
     u        revert the last change
     <C-r>    restore the last undo
     p        paste the default register
+    yy       yank the current line
    
     /{search}    search
     ?{search}    search backwards
@@ -83,7 +84,6 @@ insert mode
 visual mode
 
     y   yank the current selection to the default register
-    yy  yank the current line
     i[  select inside brackets (cursor has to be inside as well)
     i]  select inside brackets (cursor has to be inside as well)
     i{  select inside brackets (cursor has to be inside as well)

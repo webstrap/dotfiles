@@ -70,6 +70,10 @@ normal mode
     <C-u>   move half page up
     <C-d>   move half page down
     
+    :grep   use grep to find files in project
+    :cn     next grep result
+    :cp     previous grep result
+    
    
 insert mode
 

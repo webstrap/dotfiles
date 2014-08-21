@@ -106,6 +106,8 @@ fugitive vimdiff 3 way merge (git mergetool)
 
     [c          jump to previous change/conflict
     ]c          jump to the next change/conflict
-    :dg //2     diffget will change from target branch
-    :dg //3     diffget change from merge branch
-    :dp filenamepart   diffput the change from the current buffer to the middle buffer
+    :diffget //2     diffget will change from target branch
+    :diffget //3     diffget change from merge branch
+    :dp         diffput the change from the current buffer to the middle buffer
+    :Gwrite     adds the current buffer to the index and close merge
+    :diffupdate update the coloring after diffput

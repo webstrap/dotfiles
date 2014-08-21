@@ -8,10 +8,18 @@
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
 
-Command-T
+Command-T Linux
 
     sudo apt-get install vim-nox;
     sudo apt-get install ruby1.9.1-dev
+    cd ~/.vim/bundle/command-t/ruby/command-t
+    sudo ruby ./extconf.rb
+    sudo make
+    
+Command-T OSX Mavericks
+
+    sudo mv /usr/bin/ruby /usr/ruby/ruby2.0
+    sudo ln -s /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby /usr/bin/ruby
     cd ~/.vim/bundle/command-t/ruby/command-t
     sudo ruby ./extconf.rb
     sudo make

@@ -23,6 +23,8 @@ Command-T OSX Mavericks
     cd ~/.vim/bundle/command-t/ruby/command-t
     sudo ruby ./extconf.rb
     sudo make
+    sudo rm ruby
+    sudo mv /usr/ruby/ruby2.0 /usr/bin/ruby
 
 Vim-fugitive
 

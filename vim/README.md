@@ -102,3 +102,10 @@ visual mode
     a]  select around (including) (cursor has to be inside as well)
         
     
+fugitive vimdiff 3 way merge (git mergetool)
+
+    [c          jump to previous change/conflict
+    ]c          jump to the next change/conflict
+    :dg //2     diffget will change from target branch
+    :dg //3     diffget change from merge branch
+    :dp filenamepart   diffput the change from the current buffer to the middle buffer

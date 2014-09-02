@@ -84,9 +84,9 @@ let g:netrw_liststyle=3
 " Change directory to the current buffer when opening files.
 "set autochdir
 
-" Configure jump to filename under cursor
+" Configure jump to filename under cursor and have :find autocomplete
 set suffixesadd+=.coffee,.tmpl
-set path+=/opt/amazineFrontend/scripts/app
+set path+=/opt/frontend/scripts/app/**
 
 " activate mouse
 set mouse=a
@@ -116,3 +116,6 @@ function! RenameFile()
 endfunction
 map <leader>m :call RenameFile()<cr>
 
+" set file path to the status line at the bottom of vim
+set statusline+=%f
+set laststatus=2

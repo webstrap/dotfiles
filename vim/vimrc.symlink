@@ -121,4 +121,4 @@ set statusline+=%f
 set laststatus=2
 
 " set grep to default search the whole project
-set grepprg=grep\ -ir\ $*\ ./**/*.coffee\ ./scripts/**/*.tmpl
+set grepprg=grep\ -irn\ $*\ ./{scripts,client}/**/*.{coffee,tmpl}\ ./{styles,client}/**/*.scss

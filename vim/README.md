@@ -8,13 +8,23 @@
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
 
-Command-T
+Command-T Linux
 
     sudo apt-get install vim-nox;
     sudo apt-get install ruby1.9.1-dev
     cd ~/.vim/bundle/command-t/ruby/command-t
     sudo ruby ./extconf.rb
     sudo make
+    
+Command-T OSX Mavericks
+
+    sudo mv /usr/bin/ruby /usr/ruby/ruby2.0
+    sudo ln -s /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby /usr/bin/ruby
+    cd ~/.vim/bundle/command-t/ruby/command-t
+    sudo ruby ./extconf.rb
+    sudo make
+    sudo rm ruby
+    sudo mv /usr/ruby/ruby2.0 /usr/bin/ruby
 
 Vim-fugitive
 
@@ -92,3 +102,12 @@ visual mode
     a]  select around (including) (cursor has to be inside as well)
         
     
+fugitive vimdiff 3 way merge (git mergetool)
+
+    [c          jump to previous change/conflict
+    ]c          jump to the next change/conflict
+    :diffget //2     diffget will change from target branch
+    :diffget //3     diffget change from merge branch
+    :dp         diffput the change from the current buffer to the middle buffer
+    :Gwrite     adds the current buffer to the index and close merge
+    :diffupdate update the coloring after diffput

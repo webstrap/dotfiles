@@ -8,7 +8,7 @@ and adjusted to my needs.
 Run this:
 
 ```sh
-git clone --recursive git@github.com:webstrap/.vim.git ~/.dotfiles
+git clone --recursive git@github.com:webstrap/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 script/install

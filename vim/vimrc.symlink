@@ -32,7 +32,6 @@ call vundle#end()            " required
 filetype plugin indent on     " required!
 
 syntax on
-let mapleader=","
 
 " Go to tab by number
 noremap <leader>1 1gt
@@ -122,3 +121,6 @@ set laststatus=2
 
 " set grep to default search the whole project
 set grepprg=grep\ -irn\ $*\ ./{scripts,client}/**/*.{coffee,tmpl}\ ./{styles,client}/**/*.scss
+
+" highlight first search match while typing
+set incsearch

@@ -80,7 +80,19 @@ normal mode
     }       move one block/function down
     <C-u>   move half page up
     <C-d>   move half page down
-    
+    f{char} move to the character in the current line
+    ;       move to last f{char} pattern
+    ,       move to previous f{char} match
+    l       move right arrow
+    h       move left arrow
+    j       move down arrow
+    k       move up arrow
+    w       move word wise
+    W       move WORD wise
+    b       move back word wise
+    B       move back WORD wise
+
+ 
     :grep   use grep to find files in project
     :cn     next grep result
     :cp     previous grep result

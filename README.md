@@ -3,6 +3,8 @@
 This is based on  [Zach Holman](http://github.com/holman)'s [dotfiles](http://github.com/holman/dotfiles)
 and adjusted to my needs.
 
+[Vim commands](./vim)
+
 ## install
 
 Run this:

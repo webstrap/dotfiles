@@ -124,3 +124,7 @@ set grepprg=grep\ -irn\ $*\ ./{scripts,client}/**/*.{coffee,tmpl}\ ./{styles,cli
 
 " highlight first search match while typing
 set incsearch
+
+" enable jumping with % in tags and functions
+filetype plugin on
+runtime macros/matchit.vim

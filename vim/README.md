@@ -97,7 +97,13 @@ normal mode
     :cn     next grep result
     :cp     previous grep result
     
+    "{char} use a certain register for a task
+    "+      use the clipboard, good when mouse is on and prevents copy to clipboard
    
+    q{char} start stop a macro to register {char}
+    @{char} execute the macro from register {char}
+    @@      execute the last macro again
+
 insert mode
 
     <Tab>   start autocomplete if the cursor is at the end of a word

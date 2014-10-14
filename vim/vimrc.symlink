@@ -49,7 +49,7 @@ set backspace=2 " make backspace work like most other apps
 
 set tabstop=4 shiftwidth=4 expandtab " convert tab to 4 spaces
 
-set number " show line numbers
+set relativenumber " show line numbers
 
 " Toggle Vexplore with Ctrl-E
 function! ToggleVExplorer()
@@ -116,7 +116,7 @@ endfunction
 map <leader>m :call RenameFile()<cr>
 
 " set file path to the status line at the bottom of vim
-set statusline+=%f
+set statusline+=%F%m%r%h%w%<\ [0x\%02.2B]\ %=%l/%L,%v\ %p%%
 set laststatus=2
 
 " set grep to default search the whole project

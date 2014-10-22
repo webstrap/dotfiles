@@ -18,6 +18,14 @@ Command-T Linux
     
 Command-T OSX Mavericks
 
+(with homebrew vim supporting the mac clip board and ruby2.0)
+    brew install vim 
+    cd ~/.vim/bundle/command-t/ruby/command-t
+    sudo ruby ./extconf.rb
+    sudo make
+
+(or to use the pre-installed vim)
+
     sudo mv /usr/bin/ruby /usr/ruby/ruby2.0
     sudo ln -s /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby /usr/bin/ruby
     cd ~/.vim/bundle/command-t/ruby/command-t

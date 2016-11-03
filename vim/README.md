@@ -137,4 +137,5 @@ fugitive vimdiff 3 way merge (git mergetool)
     :diffget //3     diffget change from merge branch
     :dp         diffput the change from the current buffer to the middle buffer
     :Gwrite!    adds the current buffer to the index and close merge, so choose to keep one merge or target to keep it
+    :Gwq        like above and quit the file
     :diffupdate update the coloring after diffput

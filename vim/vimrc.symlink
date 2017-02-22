@@ -17,6 +17,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Quramy/tsuquyomi'
 
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
@@ -32,6 +34,7 @@ call vundle#end()            " required
 filetype plugin indent on     " required!
 
 syntax on
+au BufNewFile,BufRead *.ts set filetype=javascript
 
 " Go to tab by number
 noremap <leader>1 1gt
@@ -107,6 +110,7 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_style_error_symbol = '⁉️'

@@ -1,0 +1,22 @@
+cask_args appdir: '/Applications'
+
+tab 'homebrew/bundle'
+
+brew 'nvm'
+brew 'ack'
+
+cask 'google-chrome'
+cask 'firefox'
+cask 'iterm2'
+cask 'sublime-text'
+cask 'atom'
+cask 'java'
+cask 'eclipse-jee'
+cask 'docker'
+cask 'sequel-pro'
+cask 'adobe-reader'
+cask 'charles'
+cask 'spotify'
+cask 'slack'
+cask 'vlc'
+cask 'skype'

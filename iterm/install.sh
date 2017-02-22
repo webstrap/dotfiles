@@ -14,4 +14,9 @@ then
     mv ~/Library/Preferences/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist.old
 fi
 
-ln -s ~/.dotfiles/iterm/com.googlecode.iterm2.plist ~/Library/Preferences/
+if [ -L ~/Library/Preferences/com.googlecode.iterm2.plist ];
+then
+    echo "link of ~/Library/Preferences/com.googlecode.iterm2.plist already exists"
+else
+    ln -s ~/.dotfiles/iterm/com.googlecode.iterm2.plist ~/Library/Preferences/
+fi

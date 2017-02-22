@@ -1,6 +1,6 @@
 cask_args appdir: '/Applications'
 
-tab 'homebrew/bundle'
+tap 'homebrew/bundle'
 
 brew 'nvm'
 brew 'ack'

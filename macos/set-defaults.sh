@@ -132,3 +132,7 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Sort Activity Monitor results by CPU usage
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+# iterm load external settings
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "/Users/kong/.dotfiles/iterm/"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true

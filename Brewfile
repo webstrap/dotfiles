@@ -6,6 +6,7 @@ brew 'coreutils'
 brew 'node'
 brew 'nvm'
 brew 'ack'
+brew 'awscli'
 
 cask 'google-chrome'
 cask 'firefox'

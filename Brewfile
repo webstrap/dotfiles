@@ -7,6 +7,7 @@ brew 'node'
 brew 'nvm'
 brew 'ack'
 brew 'awscli'
+brew 'mas'
 
 cask 'google-chrome'
 cask 'firefox'
@@ -23,3 +24,5 @@ cask 'spotify'
 cask 'slack'
 cask 'vlc'
 cask 'skype'
+
+mas 'iA Writer', id: 775737590

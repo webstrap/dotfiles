@@ -136,3 +136,6 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 # iterm load external settings
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "/Users/kong/.dotfiles/iterm/"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+# iA Writer
+defaults write pro.writer.mac "Default Path Extension" -string "md"

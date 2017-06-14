@@ -161,6 +161,13 @@ runtime macros/matchit.vim
 cmap w!! w !sudo tee > /dev/null %
 
 " use clipboard as default register (for e.g. yy, d ..)
-set clipboard=unnamed
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
 
 let g:CommandTWildIgnore=&wildignore . "node_modules"

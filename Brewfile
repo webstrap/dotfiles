@@ -8,6 +8,7 @@ brew 'nvm'
 brew 'ack'
 brew 'awscli'
 brew 'mas'
+brew 'graphviz'
 
 cask 'google-chrome'
 cask 'firefox'

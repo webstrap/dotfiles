@@ -171,3 +171,6 @@ if has("clipboard")
 endif
 
 let g:CommandTWildIgnore=&wildignore . "node_modules"
+
+" delete a file and purge current buffer
+nnoremap <leader>rm :call delete(expand('%:p')) \| bdelete!<CR>

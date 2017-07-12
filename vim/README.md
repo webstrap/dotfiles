@@ -45,14 +45,15 @@ Vim-fugitive
 
 normal mode
 
-    ,t          open command-t
+    <lead>t          open command-t
                 t   open selection as new tab
                 v   open selection as new vertical split buffer
-    <C-e>       toggle vim explorer
+    <lead>rm        delete file and purge buffer
+    <C-e>        toggle vim explorer
                 t   open selection as new tab
                 v   open selection as new vertical split buffer
     :Error      trigger syntax check
-    ,{number}   switch to the tab with the given number e.g. ,2
+    <lead>{number}   switch to the tab with the given number e.g. ,2
    
     o        enter insert mode with new line below
     O        enter insert mode with new line above

@@ -9,6 +9,7 @@ brew 'ack'
 brew 'awscli'
 brew 'mas'
 brew 'graphviz'
+brew 'mysql'
 
 cask 'google-chrome'
 cask 'firefox'

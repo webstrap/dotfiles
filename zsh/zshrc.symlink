@@ -41,3 +41,6 @@ unset config_files
 
 export NVM_DIR="/Users/kong/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH=$PATH:/Users/kong/bin
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

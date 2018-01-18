@@ -1,8 +1,8 @@
 # Local/private config goes in the include
 [include]
-        path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
 [hub]
-        protocol = https
+    protocol = https
 [core]
     editor = vim
 [merge]
@@ -27,3 +27,7 @@
     added = yellow
     changed = green
     untracked = cyan
+[commit]
+	gpgsign = true
+[user]
+	signingkey = C037B7C63EC4B1B7F66E7189BC7B7FE83106418C

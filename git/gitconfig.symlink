@@ -1,33 +1,35 @@
 # Local/private config goes in the include
 [include]
-    path = ~/.gitconfig.local
+        path = ~/.gitconfig.local
 [hub]
-    protocol = https
-[core]
-    editor = vim
-[merge]
-	tool = fugitive
-[mergetool]
-	prompt = false
-[mergetool "fugitive"]
-	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
+        protocol = https
+[alias]
+        co = checkout
+        promote = !$ZSH/bin/git-promote
+        wtf     = !$ZSH/bin/git-wtf
+        rank-contributors = !$ZSH/bin/git-rank-contributors
+        count   = !git shortlog -sn
 [color]
-    # Use colors in Git commands that are capable of colored output when outputting to the terminal
-    ui = auto
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
-[commit]
-	gpgsign = true
-[user]
-	signingkey = C037B7C63EC4B1B7F66E7189BC7B7FE83106418C
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = vim
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to suppress warning message
+        default = simple
+[credential]
+	helper = osxkeychain

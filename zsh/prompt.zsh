@@ -49,7 +49,6 @@ need_push () {
       echo " with %{$fg_bold[magenta]%}$number unpushed%{$reset_color%}"
     fi
   fi
-}
 
 directory_name() {
     echo "%{$fg[green]%}${PWD/#$HOME/~}%{$reset_color%}"

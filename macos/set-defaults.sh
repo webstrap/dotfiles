@@ -19,6 +19,9 @@ sudo chflags nohidden /Volumes
 # Set a really fast key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 1  
 
+#customize touchbar to remove siri and add lock screen
+defaults write com.apple.controlstrip MiniCustomized -array "com.apple.system.brightness" "com.apple.system.volume" "com.apple.system.mute" "com.apple.system.screen-lock"
+
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true

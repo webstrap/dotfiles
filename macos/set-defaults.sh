@@ -36,12 +36,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-# Disable disk image verification
-defaults write com.apple.frameworks.diskimages skip-verify -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
-defaults write com.applle.screensaver askForPassword -int 5
+defaults write com.apple.screensaver askForPassword -int 5
 
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 

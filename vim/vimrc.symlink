@@ -82,10 +82,6 @@ let g:netrw_liststyle=3
 " Change directory to the current buffer when opening files.
 "set autochdir
 
-" Configure jump to filename under cursor and have :find autocomplete
-set suffixesadd+=.coffee,.tmpl
-set path+=/opt/frontend/scripts/app/**
-
 " activate mouse
 set mouse=a
 

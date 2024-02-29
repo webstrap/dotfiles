@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Plugin 'gmarik/Vundle.vim'
 
 " My Bundles here:
@@ -19,8 +19,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'wincent/command-t'
-Plugin 'vim-scripts'/L9'
-Plugin 'vim-scripts'/FuzzyFinder'
+" just disabled because I don't want to install them at the moment
+"Plugin 'vim-scripts'/L9'
+"Plugin 'vim-scripts'/FuzzyFinder'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

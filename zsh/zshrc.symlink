@@ -2,7 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/repos/
+export PROJECTS=~/repos/perspective/
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -40,11 +40,9 @@ done
 
 unset config_files
 
-export NVM_DIR="/Users/kong/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export PATH=$PATH:/Users/kong/bin
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export GPG_TTY=$(tty)
 # Better history
@@ -55,3 +53,35 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# bun completions
+[ -s "/Users/kong/.bun/_bun" ] && source "/Users/kong/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Function to auto-use nvm version
+auto_nvm_use() {
+    if [[ -f .nvmrc && -r .nvmrc ]]; then
+        local nvmrc_version=$(<.nvmrc)
+        local current_node_version=$(node -v)
+
+        # Compare major and minor version numbers
+        if [[ $current_node_version != $nvmrc_version* ]]; then
+            nvm use
+        fi
+    fi
+}
+
+# Add the function to the pre-command execution hook
+autoload -U add-zsh-hook
+add-zsh-hook precmd auto_nvm_use

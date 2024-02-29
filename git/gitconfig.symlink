@@ -16,7 +16,8 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = code
+        editor = e
+	hooksPath = /Users/kong/git/hooks
 [apply]
         whitespace = nowarn
 [mergetool]

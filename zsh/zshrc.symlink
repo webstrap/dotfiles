@@ -1,8 +1,8 @@
 # shortcut to this dotfiles path is $ZSH
-export ZSH=$HOME/.dotfiles
+export ZSH=$HOME/dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/repos/perspective/
+export PROJECTS=~/code/
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -67,7 +67,7 @@ fi
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$BUN_INSTALL/bin:/users/kong/bin:/opt/homebrew/bin:$PATH"
 
 # Function to auto-use nvm version
 auto_nvm_use() {
@@ -85,3 +85,7 @@ auto_nvm_use() {
 # Add the function to the pre-command execution hook
 autoload -U add-zsh-hook
 add-zsh-hook precmd auto_nvm_use
+
+if [ -f "$HOME/.env" ]; then
+  source "$HOME/.env"
+fi

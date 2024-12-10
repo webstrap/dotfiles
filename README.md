@@ -10,8 +10,8 @@ and adjusted to my needs.
 Run this:
 
 ```sh
-git clone --recursive https://github.com/webstrap/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
+git clone --recursive https://github.com/webstrap/dotfiles.git ~/dotfiles
+cd ~/dotfiles
 script/bootstrap
 bin/dot
 ```

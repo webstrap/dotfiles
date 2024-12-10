@@ -3084,7 +3084,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/kong/.dotfiles/iterm/</string>
+	<string>/Users/kong/dotfiles/iterm/</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuitWhenAllWindowsClosed</key>

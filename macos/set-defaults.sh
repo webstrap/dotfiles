@@ -17,10 +17,7 @@ chflags nohidden ~/Library
 sudo chflags nohidden /Volumes
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 1  
-
-#customize touchbar to remove siri and add lock screen
-defaults write com.apple.controlstrip MiniCustomized -array "com.apple.system.brightness" "com.apple.system.volume" "com.apple.system.mute" "com.apple.system.screen-lock"
+defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder AppleShowAllFiles YES
@@ -75,9 +72,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightC
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
-# Increase sound quality for Bluetooth headphones/headsets
-defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 64
-
 defaults write NSGlobalDomain AppleLanguages -array "en-DE" "de-DE"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
@@ -90,5 +84,5 @@ defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.Web
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 # iterm load external settings
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "/Users/kong/.dotfiles/iterm/"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "/Users/kong/dotfiles/iterm/"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
